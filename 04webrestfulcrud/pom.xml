@@ -16,6 +16,14 @@
 
     <properties>
         <java.version>1.8</java.version>
+
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>1.8</java.version>
+        <thymeleaf.version>3.0.9.RELEASE</thymeleaf.version>
+        <!-- 布局功能的支持程序  若thymeleaf3主程序  则适配layout2以上版本 -->
+        <!-- thymeleaf2   layout1 自己要改，版本要适配 -->
+        <thymeleaf-layout-dialect.version>2.2.2</thymeleaf-layout-dialect.version>
     </properties>
 
     <dependencies>
@@ -48,6 +56,12 @@
             <artifactId>junit-jupiter-api</artifactId>
             <version>5.5.0</version>
             <scope>test</scope>
+        </dependency>
+
+        <!-- 添加thymeleaf模板引擎的场景启动器 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
         </dependency>
 
     </dependencies>
