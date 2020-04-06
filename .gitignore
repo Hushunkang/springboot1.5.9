@@ -38,4 +38,3 @@ target
 .gitignore
 /out/
 target
-.mvn
