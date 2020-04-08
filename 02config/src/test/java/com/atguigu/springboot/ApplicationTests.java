@@ -25,7 +25,7 @@ class ApplicationTests {
     @Test
     public void test02(){
         System.out.println(ioc.getClass());//class org.springframework.web.context.support.GenericWebApplicationContext
-        boolean flag = ioc.containsBean("helloService");
+        boolean flag = ioc.containsBean("helloService007");
         System.out.println(flag);
     }
 
