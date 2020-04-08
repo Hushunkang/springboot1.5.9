@@ -1,6 +1,6 @@
 # yml语法采用空格的缩进来控制层级关系，只要是左对齐的数据都是同一个层级的关系
 #server:
-#  port: 8002
+#  port: 8001
 
 #person:
 #  last-name: Zhangsan
@@ -19,17 +19,16 @@ server:
   port: 8081
 spring:
   profiles:
-    active: prod
-
+    active: dev
 ---
+
 server:
-  port: 8083
+  port: 8082
 spring:
   profiles: dev
-
 ---
 
 server:
-  port: 8084
+  port: 8083
 spring:
   profiles: prod
