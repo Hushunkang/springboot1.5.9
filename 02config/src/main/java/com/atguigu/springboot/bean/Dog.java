@@ -4,7 +4,7 @@ package com.atguigu.springboot.bean;
  * @author hskBeginner Email：2752962035@qq.com
  * @version 1.0
  * @description
- * @create 2020年04月01日 11时05分36秒
+ * @create 2020年04月08日 18时07分40秒
  */
 public class Dog {
 
@@ -34,4 +34,5 @@ public class Dog {
                 ", age=" + age +
                 '}';
     }
+
 }

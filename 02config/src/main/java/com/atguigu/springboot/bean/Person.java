@@ -8,54 +8,24 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * 将配置文件中配置的每一个属性的值，映射到这个组件中
- * @ConfigurationProperties：告诉SpringBoot将本类中的所有属性和配置文件中相关的配置进行绑定；
- *      prefix = "person"：配置文件中哪个下面的所有属性进行一一映射
- *
- * 只有这个组件是容器中的组件，才能容器提供的@ConfigurationProperties功能；
- *  @ConfigurationProperties(prefix = "person")默认从全局配置文件中获取值；
- *
+ * @author hskBeginner Email：2752962035@qq.com
+ * @version 1.0
+ * @description
+ * @create 2020年04月08日 18时07分31秒
  */
-@Component
-@ConfigurationProperties(prefix = "person")//默认加载application.properties或者yml内配置的属性
-//@PropertySource(value = {"classpath:person.properties"})
-//@Validated
+@ConfigurationProperties(prefix = "person")//告诉spring boot将本类中的所有属性和spring boot配置文件中对应的属性进行绑定
+//prefix = "person"映射的前缀，在配置文件里面以person为前缀的属性里面找，进行映射
+@Component//只有当前组件在spring ioc容器中，@ConfigurationProperties注解作用于当前类的作用才可以生效
 public class Person {
 
-
-    /**
-     * <bean class="Person">
-     *      <property name="lastName" value="字面量/${key}从环境变量、配置文件中获取值/#{SpEL}"></property>
-     * <bean/>
-     */
-
-    //lastName必须是邮箱格式
-//    @Email
-//    @Value("${person.last-name}")
     private String lastName;
-//    @Value("#{11*2}")
     private Integer age;
-//    @Value("true")
     private Boolean boss;
-
     private Date birth;
-//    @Value("${person.maps}")
-    private Map<String,Object> maps;
-    private List<Object> lists;
-    private Dog dog;
 
-    @Override
-    public String toString() {
-        return "Person{" +
-                "lastName='" + lastName + '\'' +
-                ", age=" + age +
-                ", boss=" + boss +
-                ", birth=" + birth +
-                ", maps=" + maps +
-                ", lists=" + lists +
-                ", dog=" + dog +
-                '}';
-    }
+    private Dog dog;
+    private List<Object> lists;
+    private Map<String,Object> maps;
 
     public String getLastName() {
         return lastName;
@@ -89,12 +59,12 @@ public class Person {
         this.birth = birth;
     }
 
-    public Map<String, Object> getMaps() {
-        return maps;
+    public Dog getDog() {
+        return dog;
     }
 
-    public void setMaps(Map<String, Object> maps) {
-        this.maps = maps;
+    public void setDog(Dog dog) {
+        this.dog = dog;
     }
 
     public List<Object> getLists() {
@@ -105,11 +75,25 @@ public class Person {
         this.lists = lists;
     }
 
-    public Dog getDog() {
-        return dog;
+    public Map<String, Object> getMaps() {
+        return maps;
     }
 
-    public void setDog(Dog dog) {
-        this.dog = dog;
+    public void setMaps(Map<String, Object> maps) {
+        this.maps = maps;
     }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "lastName='" + lastName + '\'' +
+                ", age=" + age +
+                ", boss=" + boss +
+                ", birth=" + birth +
+                ", dog=" + dog +
+                ", lists=" + lists +
+                ", maps=" + maps +
+                '}';
+    }
+
 }

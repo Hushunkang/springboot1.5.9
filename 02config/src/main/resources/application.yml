@@ -1,22 +1,19 @@
+# yml语法采用空格的缩进来控制层级关系，只要是左对齐的数据都是同一个层级的关系
 #server:
-#  port: 8080
+#  port: 8002
 
-
-
-#person:
-#  lastName: zhangsan
-#  age: 25
-#  boss: false
-#  birth: 2020/04/01
-#  maps: {k1: v1,k2: v2,k3: v3}
-#  lists:
-#    - lisi
-#    - wangwu
-#    - zhaoliu
-#  dog:
-#    name: 小狗
-#    age: 2
-
+person:
+  last-name: Zhangsan
+  age: 25
+  boss: false
+  birth: 1996/02/16
+  dog:
+    name: 小狗
+    age: 1
+  lists:
+    - Lisi
+    - Wangwu
+  maps: {k1: v1,k2: v2}
 
 server:
   port: 8081
@@ -29,7 +26,6 @@ server:
   port: 8083
 spring:
   profiles: dev
-
 
 ---
 

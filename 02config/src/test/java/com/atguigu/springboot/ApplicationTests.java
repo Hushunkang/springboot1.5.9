@@ -6,33 +6,26 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.ApplicationContext;
 
-/**
- * spring boot单元测试
- *
- * 可以在测试期间很方便的类似编码的方式进行自动注入的功能
- *
- */
+//spring boot提供的单元测试，可以很方便的在测试期间di
 @SpringBootTest
 class ApplicationTests {
 
     @Autowired
-    Person person;
+    private Person person;
 
     @Autowired
-    ApplicationContext ioc;
+    private ApplicationContext ioc;
 
     @Test
-    void test1(){
-
-        System.out.println(ioc.getClass());//class org.springframework.web.context.support.GenericWebApplicationContext
-
-        boolean flag = ioc.containsBean("helloService02");
-        System.out.println(flag);
+    public void test01() {
+        System.out.println(person);
     }
 
     @Test
-    void contextLoads() {
-        System.out.println(person);
+    public void test02(){
+        System.out.println(ioc.getClass());//class org.springframework.web.context.support.GenericWebApplicationContext
+        boolean flag = ioc.containsBean("helloService02");
+        System.out.println(flag);
     }
 
 }
