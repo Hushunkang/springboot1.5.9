@@ -2,18 +2,18 @@
 #server:
 #  port: 8002
 
-person:
-  last-name: Zhangsan
-  age: 25
-  boss: false
-  birth: 1996/02/16
-  dog:
-    name: 小狗
-    age: 1
-  lists:
-    - Lisi
-    - Wangwu
-  maps: {k1: v1,k2: v2}
+#person:
+#  last-name: Zhangsan
+#  age: 25
+#  boss: false
+#  birth: 1996/02/16
+#  dog:
+#    name: 小狗
+#    age: 1
+#  lists:
+#    - Lisi
+#    - Wangwu
+#  maps: {k1: v1,k2: v2}
 
 server:
   port: 8081
