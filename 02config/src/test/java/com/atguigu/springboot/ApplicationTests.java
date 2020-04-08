@@ -13,6 +13,7 @@ class ApplicationTests {
     @Autowired
     private Person person;
 
+    //拿到spring ioc容器
     @Autowired
     private ApplicationContext ioc;
 
@@ -24,7 +25,7 @@ class ApplicationTests {
     @Test
     public void test02(){
         System.out.println(ioc.getClass());//class org.springframework.web.context.support.GenericWebApplicationContext
-        boolean flag = ioc.containsBean("helloService02");
+        boolean flag = ioc.containsBean("helloService");
         System.out.println(flag);
     }
 
