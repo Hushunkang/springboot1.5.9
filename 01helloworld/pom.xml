@@ -16,7 +16,7 @@
     </parent>
     <!-- 分析得到：当前这个模块的顶级父模块是spring-boot-dependencies，这个模块其实就是spring boot的版本仲裁中心 -->
 
-    <!-- spring boot的web场景启动器 -->
+    <!-- spring boot的web场景启动器，管理了web模块正常运行所需要的依赖 -->
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
