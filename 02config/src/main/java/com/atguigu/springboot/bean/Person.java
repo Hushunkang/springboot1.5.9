@@ -1,9 +1,9 @@
 package com.atguigu.springboot.bean;
 
-import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
 
-import javax.validation.constraints.Email;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
@@ -14,9 +14,11 @@ import java.util.Map;
  * @description
  * @create 2020年04月08日 18时07分31秒
  */
-//@ConfigurationProperties(prefix = "person")//告诉spring boot将本类中的所有属性和spring boot配置文件中对应的属性进行绑定
+@ConfigurationProperties(prefix = "person")//告诉spring boot将本类中的所有属性和spring boot配置文件中对应的属性进行绑定
 //prefix = "person"映射的前缀，在配置文件里面以person为前缀的属性里面找，进行映射
 @Component//只有当前组件在spring ioc容器中，@ConfigurationProperties注解作用于当前类的作用才可以生效
+@PropertySource({"classpath:person.properties"})//加载外部指定的资源文件
+//@ConfigurationProperties注解默认加载的是application.properties或者application.yml文件，这两个注解有互补效果
 public class Person {
 
     /**
@@ -24,14 +26,14 @@ public class Person {
      *      <property name="lastName" value="字面量/${key}从环境变量、配置文件中获取值/#{SpEL}"></property>
      * <bean/>
      */
-    @Value("原汁原味")//spring底层的一个注解，@Value算是一种di的方式
-    @Email//表示lastName必须是邮箱格式，否则校验失败出错，@ConfigurationProperties支持JSR303数据校验，@Value不支持
+//    @Value("原汁原味")//spring底层的一个注解，@Value算是一种di的方式
+//    @Email//表示lastName必须是邮箱格式，否则校验失败出错，@ConfigurationProperties支持JSR303数据校验，@Value不支持
     private String lastName;
 
-    @Value("#{2 * 11}")
+//    @Value("#{2 * 11}")
     private Integer age;
 
-    @Value("${person.boss}")
+//    @Value("${person.boss}")
     private Boolean boss;
     private Date birth;
 
