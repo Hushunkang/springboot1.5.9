@@ -8,7 +8,7 @@ import org.springframework.context.ApplicationContext;
 
 //spring boot提供的单元测试，可以很方便的在测试期间di
 @SpringBootTest
-class ApplicationTests {
+class ConfigApplicationTests {
 
     @Autowired
     private Person person;
