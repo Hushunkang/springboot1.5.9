@@ -25,4 +25,6 @@ public class DAApplicationTests {
         System.out.println(dataSource.getConnection());//HikariProxyConnection@354154358 wrapping com.mysql.cj.jdbc.ConnectionImpl@5a6d30e2
     }
 
+    //说明：参照DataSourceConfiguration的源码，看看一下子就明白咋流程了，很简单
+
 }
