@@ -11,9 +11,9 @@
     </parent>
 
     <groupId>com.atguigu</groupId>
-    <artifactId>02config</artifactId>
+    <artifactId>02config02</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>02config</name>
+    <name>02config02</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
