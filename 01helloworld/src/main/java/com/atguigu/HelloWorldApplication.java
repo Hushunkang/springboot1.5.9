@@ -9,7 +9,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @description
  * @create 2020年04月08日 15时20分58秒
  */
-@SpringBootApplication//用于标识spring boot的主程序类，表明这是一个spring boot应用
+@SpringBootApplication//用于标识spring boot主程序类，表明这是一个spring boot应用
 public class HelloWorldApplication {
 
     public static void main(String[] args) {
