@@ -25,7 +25,28 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+            <exclusions>
+                <exclusion>
+                    <artifactId>logback-classic</artifactId>
+                    <groupId>ch.qos.logback</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>log4j-to-slf4j</artifactId>
+                    <groupId>org.apache.logging.log4j</groupId>
+                </exclusion>
+            </exclusions>
         </dependency>
+
+        <!-- 不想用logback日志框架，偏爱用log4j日志框架 -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+        </dependency>
+
+        <!-- 说明：要想切换成log4j2也很简单
+                  参照官方文档，先排除logging的场景启动器，然后加上log4j2的场景启动器
+                  上面两个场景启动器官方文档上面说的是二选一
+         -->
 
         <!-- 导入spring boot官方提供的配置文件处理器，在编写spring boot配置文件的属性时候就有提示 -->
         <dependency>
