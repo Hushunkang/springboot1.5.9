@@ -27,8 +27,6 @@ public class LoggingApplicationTests {
         logger.debug("这是debug日志。。。");
         //spring boot2.2.1版本默认的日志级别为info级别
         //没有在配置文件中显式的指明日志的级别就使用默认的日志级别，默认root级别规定成info级别
-
-
         logger.info("这是info日志。。。");
         logger.warn("这是warn日志。。。");
         logger.error("这是error日志。。。");
