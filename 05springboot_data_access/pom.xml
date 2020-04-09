@@ -61,6 +61,13 @@
             <version>1.2.17</version>
         </dependency>
 
+        <!-- 因为spring官方没有提供mybatis的场景启动器，下面这个starter是mybatis自己滴，你看名字是不是和spring提供的场景启动器不一样嘞 -->
+        <dependency>
+            <groupId>org.mybatis.spring.boot</groupId>
+            <artifactId>mybatis-spring-boot-starter</artifactId>
+            <version>1.3.2</version>
+        </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
