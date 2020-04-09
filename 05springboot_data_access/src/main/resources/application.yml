@@ -1,5 +1,6 @@
 spring:
   datasource:
+#   数据源的基本配置
     url: jdbc:mysql://localhost:3306/sb_data_access?serverTimezone=GMT%2B8
     username: root
     password: 123456
@@ -8,3 +9,21 @@ spring:
      - classpath:edu_teacher.sql
      - classpath:edu_subject.sql
     initialization-mode: always
+    type: com.alibaba.druid.pool.DruidDataSource #显式的告诉spring boot，我要用这个数据源，别用你默认的
+#   数据源的其它配置
+    initialSize: 5
+    minIdle: 5
+    maxActive: 20
+    maxWait: 60000
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: SELECT 1 FROM DUAL
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+    #配置监控统计拦截的filters，去掉后监控界面sql无法统计，'wall'用于防火墙
+    filters: stat,wall,log4j
+    maxPoolPreparedStatementPerConnectionSize: 20
+    useGlobalDataSourceStat: true
+    connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=500
