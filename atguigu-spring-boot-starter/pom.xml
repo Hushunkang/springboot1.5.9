@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- 这是一个自定义spring boot的场景启动器 -->
+    <groupId>com.atguigu.starter</groupId>
+    <artifactId>atguigu-spring-boot-starter</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <dependencies>
+        <!-- 在自定义spring boot的场景启动器中引入自动配置模块，用户使用的时候只需要引入自定义spring boot的场景启动器即可 -->
+        <dependency>
+            <groupId>com.atguigu.starter</groupId>
+            <artifactId>atguigu-spring-boot-starter-autoconfiguration</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+
+</project>
