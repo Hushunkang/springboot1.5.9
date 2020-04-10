@@ -9,5 +9,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
  * @description
  * @create 2020年04月10日 02时14分45秒
  */
-public interface EduTeacherRepository extends JpaRepository<EduTeacher,Integer> {
+public interface EduTeacherRepository extends JpaRepository<EduTeacher,String> {
 }

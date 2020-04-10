@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Optional;
+
 /**
  * @author hskBeginner Email：2752962035@qq.com
  * @version 1.0
@@ -23,8 +25,9 @@ public class EduTeacherController {
 
     @GetMapping("getTeacherById/{id}")
     public EduTeacher getTeacherById(@PathVariable("id") String id){
-//        eduTeacherRepository.findOne();
-        return null;
+        Optional<EduTeacher> eduTeacherOptional = eduTeacherRepository.findById(id);
+        EduTeacher eduTeacher = eduTeacherOptional.get();
+        return eduTeacher;
     }
 
 }
