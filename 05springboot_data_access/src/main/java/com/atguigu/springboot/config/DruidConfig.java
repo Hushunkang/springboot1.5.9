@@ -32,7 +32,7 @@ public class DruidConfig {
     }
 
     //配置druid监控
-    //1、配置一个管理后台的servlet
+    //1、配置一个druid管理控制台的servlet
     @Bean
     public ServletRegistrationBean statViewServlet(){
         ServletRegistrationBean<StatViewServlet> bean = new ServletRegistrationBean<>(new StatViewServlet(), "/druid/*");
@@ -45,7 +45,7 @@ public class DruidConfig {
         return bean;
     }
 
-    //2、配置一个监控的filter
+    //2、配置一个druid监控的filter
     @Bean
     public FilterRegistrationBean webStatFilter(){
         FilterRegistrationBean<Filter> bean = new FilterRegistrationBean<>();
