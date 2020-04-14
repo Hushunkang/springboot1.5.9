@@ -6,7 +6,7 @@ import com.atguigu.springboot.bean.EduSubject;
  * @author hskBeginner Email：2752962035@qq.com
  * @version 1.0
  * @description
- * @create 2020年04月09日 20时37分09秒
+ * @create 2020年04月09日
  */
 //@Mapper//这个注解的作用和@MapperScan注解的作用一样，只是MapperScan是批量的
 //@MapperScan注解的作用，是批量扫描mybatis的dao层的所以mapper接口

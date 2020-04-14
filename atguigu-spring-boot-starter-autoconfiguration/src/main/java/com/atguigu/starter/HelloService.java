@@ -4,7 +4,7 @@ package com.atguigu.starter;
  * @author hskBeginner Email：2752962035@qq.com
  * @version 1.0
  * @description
- * @create 2020年04月10日 12时23分40秒
+ * @create 2020年04月10日
  */
 public class HelloService {
 

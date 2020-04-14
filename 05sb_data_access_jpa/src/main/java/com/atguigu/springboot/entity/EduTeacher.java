@@ -7,7 +7,7 @@ import java.util.Date;
  * @author hskBeginner Email：2752962035@qq.com
  * @version 1.0
  * @description
- * @create 2020年04月10日 01时57分11秒
+ * @create 2020年04月10日
  */
 @Entity//告诉jpa，这是一个和数据库表做映射的实体类
 @Table(name="edu_teacher")//当前这个实体类对应了数据库里面的哪张表

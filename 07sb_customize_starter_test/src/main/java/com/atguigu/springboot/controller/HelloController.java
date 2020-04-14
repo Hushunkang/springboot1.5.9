@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @author hskBeginner Email：2752962035@qq.com
  * @version 1.0
  * @description
- * @create 2020年04月10日 13时04分06秒
+ * @create 2020年04月10日
  */
 @RestController
 @RequestMapping("/hello")

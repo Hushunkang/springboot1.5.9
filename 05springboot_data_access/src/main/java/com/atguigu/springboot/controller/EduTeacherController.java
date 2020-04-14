@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @author hskBeginner Email：2752962035@qq.com
  * @version 1.0
  * @description
- * @create 2020年04月09日 20时43分30秒
+ * @create 2020年04月09日
  */
 @RestController
 @RequestMapping("/teacher")

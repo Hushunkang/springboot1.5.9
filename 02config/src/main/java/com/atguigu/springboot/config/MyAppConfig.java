@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Configuration;
  * @author hskBeginner Email：2752962035@qq.com
  * @version 1.0
  * @description
- * @create 2020年04月08日 22时50分56秒
+ * @create 2020年04月08日
  */
 @Configuration//表示当前类是一个配置类，用于替换传统的spring的xml配置文件，并且自身就是一个组件
 public class MyAppConfig {

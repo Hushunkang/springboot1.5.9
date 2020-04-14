@@ -7,7 +7,7 @@ import org.apache.ibatis.annotations.Select;
  * @author hskBeginner Email：2752962035@qq.com
  * @version 1.0
  * @description
- * @create 2020年04月09日 20时37分09秒
+ * @create 2020年04月09日
  */
 //@Mapper//因为用了@MapperScan批量扫描并向spring ioc容器里面注册组件
 public interface EduTeacherMapper {

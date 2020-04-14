@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @author hskBeginner Email：2752962035@qq.com
  * @version 1.0
  * @description
- * @create 2020年04月08日 15时20分58秒
+ * @create 2020年04月08日
  */
 @SpringBootApplication//用于标识spring boot主程序类，表明这是一个spring boot应用
 public class HelloWorldApplication {
