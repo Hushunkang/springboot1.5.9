@@ -17,7 +17,7 @@ public class Application {
     }
 
     //调试源码总结：spring boot2.2.1应用启动原理
-    //第一步：创建SpringApplication，通过一系列方法调用deduce到我这个spring boot应用的主程序类是哪个
+    //第一步：创建SpringApplication，通过一系列方法调用deduce（推测）到我这个spring boot应用的主程序类是哪个
     //       还有推断出你这个spring boot应用的类型
     //    private Class<? extends StandardEnvironment> deduceEnvironmentClass() {
     //        switch (this.webApplicationType) {
