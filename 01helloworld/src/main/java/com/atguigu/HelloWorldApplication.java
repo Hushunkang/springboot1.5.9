@@ -52,6 +52,6 @@ public class HelloWorldApplication {
      */
 
     //总结：spring boot通过一系列黑箱操作，在spring boot应用启动的时候，向spring ioc容器里面注册很多自动配置类
-    //     当应用程序需要这些Bean（自动配置类）的时候，di即可，免去了我们手动编写配置文件、di等工作
+    //     当应用程序需要这些Bean（自动配置类）的时候，di即可
 
 }

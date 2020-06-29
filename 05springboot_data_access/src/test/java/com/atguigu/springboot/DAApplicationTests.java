@@ -21,6 +21,7 @@ public class DAApplicationTests {
 
     @Test
     public void test01() throws SQLException {
+        //测试看看，用的哪一个数据源/数据库连接池
         System.out.println(dataSource.getClass());//spring boot2.2.1版本的底层默认使用的数据源是class com.zaxxer.hikari.HikariDataSource
         System.out.println(dataSource.getConnection());//HikariProxyConnection@354154358 wrapping com.mysql.cj.jdbc.ConnectionImpl@5a6d30e2
     }
